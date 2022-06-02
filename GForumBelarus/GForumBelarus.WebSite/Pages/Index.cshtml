@@ -8,3 +8,20 @@
     <h1 class="display-4">Guide Forum Above Belarus</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<div class="card-columns">
+@foreach (var Product in Model.Products){
+    <div> 
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('@Product.Image');"></div>
+            <div class="card-body">
+                <h5 class="card-title">@Product.Title</h5>
+
+            </div>
+        </div>
+
+    </div>
+
+}
+</div>
