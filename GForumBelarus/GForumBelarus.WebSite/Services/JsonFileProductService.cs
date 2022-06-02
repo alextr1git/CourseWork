@@ -33,13 +33,13 @@ namespace ForumGuide.WebSite.Services
             {
                 var products = GetProducts();
 
-                if (products.First(x => x.Id == productId).Ratings == null)
+                if (products.First(x => x.Id == productId).Ratings == null) // search of first item with such ID
                 {
                     products.First(x => x.Id == productId).Ratings = new int[] { rating };
                 }
                 else
                 {
-                    var ratings = products.First(x => x.Id == productId).Ratings.ToList();
+                    var ratings = products.First(x => x.Id == productId).Ratings.ToList(); //list of ratings
                     ratings.Add(rating);
                     products.First(x => x.Id == productId).Ratings = ratings.ToArray();
                 }
@@ -49,10 +49,10 @@ namespace ForumGuide.WebSite.Services
                 JsonSerializer.Serialize<IEnumerable<Product>>(
                     new Utf8JsonWriter(outputStream, new JsonWriterOptions
                     {
-                        SkipValidation = true,
+                        SkipValidation = true, // to accept any language
                         Indented = true
                     }),
-                    products
+                    products //write down the item with changed rating
                 );
             }
         }

@@ -1,7 +1,9 @@
 using ForumGuide.WebSite.Services;
 using GForumBelarus.WebSite.Data;
+using GForumBelarus.WebSite.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -12,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace GForumBelarus.WebSite
@@ -34,7 +37,9 @@ namespace GForumBelarus.WebSite
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+            services.AddControllers();
             services.AddTransient<JsonFileProductService>(); // transient means you can call it whenever you want to
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +68,14 @@ namespace GForumBelarus.WebSite
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                //endpoints.MapGet("/products", (context) =>
+                //{
+                //    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
+                //    var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
+                //    return context.Response.WriteAsync(json);
+                //}
+                //);
             });
         }
     }
