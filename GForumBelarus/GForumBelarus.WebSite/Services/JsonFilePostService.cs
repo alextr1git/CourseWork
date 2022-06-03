@@ -55,5 +55,22 @@ namespace GForumBelarus.WebSite.Services
                     posts //write down the item with changed rating
                 );
             }
+
+            public void AddComment(string postid, string comment)
+            {
+
+                var posts = GetPosts();
+
+                if (posts.First(x => x.Id == postid).Comments == null) // search of first item with such ID
+                {
+                    posts.First(x => x.Id == postid).Comments = new string[] { comment };
+                }
+                else
+                {
+                    var existcomments = posts.First(x => x.Id == postid).Comments.ToList(); //list of comments
+                    existcomments.Add(comment);
+                    posts.First(x => x.Id == postid).Comments = existcomments.ToArray();
+                }
+            }
         }
     }

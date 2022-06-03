@@ -15,8 +15,7 @@ namespace GForumBelarus.WebSite.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public int[] Ratings { get; set; }
-
-        //public string[] Comments { get; set; }
+        public string[] Comments { get; set; }
 
         public override string ToString() => JsonSerializer.Serialize<Post>(this); // convert our object data back to Json (PRODUCTS->JSON)
 

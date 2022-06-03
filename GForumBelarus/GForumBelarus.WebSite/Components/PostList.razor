@@ -57,7 +57,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="modal-footer">
+					<div class="modal-footer">
+
 					@if (voteCount == 0)
 					{
 						<span>Проголосуйте первым!</span>
@@ -66,7 +67,7 @@
 					{
 						<span>@voteCount @voteLabel</span>
 
-					}
+					}			
 
 					@for (int i = 1; i <= 5; i++)
 					{
@@ -80,8 +81,25 @@
 							<span class="fa-star fa" @onclick="(e => SubmitRating(currentStar))"></span>
 						}
 					}
-
 					</div>
+					
+					<div class="modal-footer">
+						@if (comCount == 0)
+						{
+							<span>Оставьте комментарий!</span>
+						}
+						else
+						{
+							<span>@comCount @comLabel</span>
+							@foreach(string comment in CommentsList)
+							{
+								<span>@comment</span>
+							}	
+
+						}
+						
+					
+				</div>
 		</div>
 	</div>
 </div>
@@ -99,11 +117,16 @@
 		selectPostId = postId;
 		selectedPost = PostService.GetPosts().First(x => x.Id == postId);
 		GetCurrentRating();
+		GetCurrentComments();
 	}
 
 	int currentRating = 0;
+	int CurrentCom = 0;
 	int voteCount = 0;
+	string comLabel;
+	int comCount = 0;
 	string voteLabel;
+	List<string> CommentsList = new List<string>();
 
 	void GetCurrentRating()
 	{
@@ -120,10 +143,30 @@
 		}
 	}
 
-	void SubmitRating(int rating)
+	void GetCurrentComments()
 	{
-		PostService.AddRating(selectPostId, rating);
-		SelectPost(selectedPost.Id);
-	}
+		if (selectedPost.Comments == null)
+		{
+			CurrentCom = 0;
+			comCount = 0;
+		}
+		else
+		{
+			comCount = selectedPost.Comments.Count();
+			comLabel = comCount > 1 ? "Комментариев" : "Комментарий";
+			CommentsList.Clear();
+			foreach (string comment in selectedPost.Comments)
+					{
+						CommentsList.Add(comment);
+					}
+				}
+			}
+			void SubmitRating(int rating)
+			{
+				PostService.AddRating(selectPostId, rating);
+				SelectPost(selectedPost.Id);
+
+			
+			}
 
 }

@@ -41,7 +41,7 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 93 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
+#line 111 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
        
 	Post selectedPost;
 	string selectPostId;
@@ -51,11 +51,16 @@ using GForumBelarus.WebSite.Services;
 		selectPostId = postId;
 		selectedPost = PostService.GetPosts().First(x => x.Id == postId);
 		GetCurrentRating();
+		GetCurrentComments();
 	}
 
 	int currentRating = 0;
+	int CurrentCom = 0;
 	int voteCount = 0;
+	string comLabel;
+	int comCount = 0;
 	string voteLabel;
+	List<string> CommentsList = new List<string>();
 
 	void GetCurrentRating()
 	{
@@ -72,11 +77,31 @@ using GForumBelarus.WebSite.Services;
 		}
 	}
 
-	void SubmitRating(int rating)
+	void GetCurrentComments()
 	{
-		PostService.AddRating(selectPostId, rating);
-		SelectPost(selectedPost.Id);
-	}
+		if (selectedPost.Comments == null)
+		{
+			CurrentCom = 0;
+			comCount = 0;
+		}
+		else
+		{
+			comCount = selectedPost.Comments.Count();
+			comLabel = comCount > 1 ? "Комментариев" : "Комментарий";
+			CommentsList.Clear();
+			foreach (string comment in selectedPost.Comments)
+					{
+						CommentsList.Add(comment);
+					}
+				}
+			}
+			void SubmitRating(int rating)
+			{
+				PostService.AddRating(selectPostId, rating);
+				SelectPost(selectedPost.Id);
+
+			
+			}
 
 
 #line default
