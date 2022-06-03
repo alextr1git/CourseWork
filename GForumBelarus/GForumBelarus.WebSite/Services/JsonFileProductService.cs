@@ -6,7 +6,7 @@ using GForumBelarus.WebSite.Models;
 using Microsoft.AspNetCore.Hosting;
 
 
-namespace ForumGuide.WebSite.Services
+namespace GForumBelarus.WebSite.Services
 {
         public class JsonFileProductService // Allows us to get Objects From JSON database file
         {

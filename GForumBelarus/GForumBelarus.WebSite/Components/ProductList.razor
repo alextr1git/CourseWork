@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using GForumBelarus.WebSite.Models
+@using GForumBelarus.WebSite.Services
+@inject JsonFileProductService ProductService
+
+<div class="card-columns">
+    @foreach (var Product in ProductService.GetProducts()) {
+     <div> 
+
+        <div class="card">
+            <div class="card-img" style="background-image: url('@Product.Image');"></div>
+            <div class="card-body">
+                <h5 class="card-title">@Product.Title</h5>
+
+            </div>
+        </div>
+        <div class ="card-footer">
+            <small class="text-muted">
+                <button @onclick="(e => SelectProduct(Product.Id))"
+                    data-toggle="modal" data-target="#productModal" class="btn btn-primary">More info</button>
+
+            </small>
+        </div>
+     </div>
+
+}
+</div>
+
+
+@code{
+        Product selectProduct;
+        string selectProductId;
+
+        void SelectProduct(string productId)
+        {
+            selectProductId = productId;
+            selectProduct = ProductService.GetProducts().First(x => x.Id == productId);
+        }
+
+}

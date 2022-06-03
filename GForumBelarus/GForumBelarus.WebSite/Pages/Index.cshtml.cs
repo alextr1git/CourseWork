@@ -1,4 +1,4 @@
-﻿using ForumGuide.WebSite.Services;
+﻿using GForumBelarus.WebSite.Services;
 using GForumBelarus.WebSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

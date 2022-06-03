@@ -1,4 +1,4 @@
-using ForumGuide.WebSite.Services;
+using GForumBelarus.WebSite.Services;
 using GForumBelarus.WebSite.Data;
 using GForumBelarus.WebSite.Models;
 using Microsoft.AspNetCore.Builder;
@@ -37,6 +37,7 @@ namespace GForumBelarus.WebSite
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages();
+            services.AddServerSideBlazor();
             services.AddControllers();
             services.AddTransient<JsonFileProductService>(); // transient means you can call it whenever you want to
             
@@ -69,6 +70,7 @@ namespace GForumBelarus.WebSite
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
+                endpoints.MapBlazorHub();
                 //endpoints.MapGet("/products", (context) =>
                 //{
                 //    var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();

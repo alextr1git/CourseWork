@@ -90,3 +90,8 @@ E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelaru
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.dll
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.pdb
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.genruntimeconfig.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.RazorComponent.input.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\ProductList.razor.g.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.RazorComponent.output.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\GForumBelarus.WebSite.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\ProductList.razor.g.cs
