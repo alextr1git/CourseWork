@@ -26,7 +26,7 @@
 
 	}
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> //stars fonts
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 @if (selectedPost != null)
 {
@@ -46,13 +46,21 @@
 								</div>
 								<div class="card-body">
 									<p class="card-text">@selectedPost.Description</p>
+									
+								</div>
+
+								<div class="card-body">
+
+									<p class="card-text">Автор: @selectedPost.Creator</p>
+									<p class="card-text">Дата публикации: @selectedPost.PublDate</p>
+
 								</div>
 							</div>
 						</div>
 						<div class="modal-footer">
 					@if (voteCount == 0)
 					{
-						<span>Be the first to vote!</span>
+						<span>Проголосуйте первым!</span>
 					}
 					else
 					{
@@ -107,7 +115,7 @@
 		else
 		{
 			voteCount = selectedPost.Ratings.Count();
-			voteLabel = voteCount > 1 ? "Votes" : "Vote";
+			voteLabel = voteCount > 1 ? "Оценок" : "Оценка";
 			currentRating = selectedPost.Ratings.Sum() / voteCount;
 		}
 	}

@@ -41,7 +41,7 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 85 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
+#line 93 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
        
 	Post selectedPost;
 	string selectPostId;
@@ -67,7 +67,7 @@ using GForumBelarus.WebSite.Services;
 		else
 		{
 			voteCount = selectedPost.Ratings.Count();
-			voteLabel = voteCount > 1 ? "Votes" : "Vote";
+			voteLabel = voteCount > 1 ? "Оценок" : "Оценка";
 			currentRating = selectedPost.Ratings.Sum() / voteCount;
 		}
 	}
