@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 @if (selectedPost != null)
-{
+{	
 <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postTitle" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 
@@ -91,18 +91,29 @@
 						else
 						{
 							<span>@comCount @comLabel</span>
-							@foreach(string comment in CommentsList)
-							{
-								<span>@comment</span>
-							}	
-
+								@foreach(string comment in CommentsList)
+											{
+												<span>@comment</span>
+											}	
+							
+							
+						
+							
+							  
+								  	
+						
+					
 						}
 						
 					
-				</div>
-		</div>
+					</div>
+
+				
+
+		</div>		
 	</div>
 </div>
+
 
 
 }
