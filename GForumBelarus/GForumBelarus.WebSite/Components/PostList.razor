@@ -82,7 +82,6 @@
 						}
 					}
 					</div>
-					
 					<div class="modal-footer">
 						@if (comCount == 0)
 						{
@@ -90,22 +89,27 @@
 						}
 						else
 						{
-							<span>@comCount @comLabel</span>
+							
+							<div class="container justify-content-center mt-5 border-left border-right">
 								@foreach(string comment in CommentsList)
 											{
-												<span>@comment</span>
+												
+												
+												<div class="d-flex justify-content-center py-2">
+													<div class="second py-2 px-2"> <span class="commentssection">Type your note, and hit enter to add it</span>
+														<div class="d-flex justify-content-between py-1 pt-2">
+															<div><span class="namecomment">/username</span></div>											
+														</div>
+													</div>
+												</div>
+												
+												
 											}	
-							
-							
-						
-							
-							  
-								  	
-						
-					
+											</div>
+											
+											
+										
 						}
-						
-					
 					</div>
 
 				

@@ -18,6 +18,22 @@ for details on configuring this project to bundle and minify static web assets. 
     font-family: 'Nunito', sans-serif;
     background: #fbfafd;
 }
+.Commentsaredown {
+    text-align:center;
+}
+
+.commentssection {
+    font-size: 13px;
+    font-weight: 500;
+    color: #56575b;
+}
+
+.namecomment {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 6px;
+    color: #56575b;
+}
 
 .card-columns .card-img {
     height: 330px;
