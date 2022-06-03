@@ -74,7 +74,6 @@ using GForumBelarus.WebSite.Services;
 
 	void SubmitRating(int rating)
 	{
-		System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
 		ProductService.AddRating(selectProductId, rating);
 		SelectProduct(selectedProduct.Id);
 	}

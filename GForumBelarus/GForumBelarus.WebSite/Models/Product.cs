@@ -3,12 +3,12 @@ using System.Text.Json.Serialization;
 
 namespace GForumBelarus.WebSite.Models
 {
-    public class Product
+    public class Product //main class
     {
         public string Id { get; set; }
         public string Maker { get; set; }
 
-        [JsonPropertyName("img")]
+        [JsonPropertyName("img")] //json tag
         public string Image { get; set; }
         public string Url { get; set; }
         public string Title { get; set; }
