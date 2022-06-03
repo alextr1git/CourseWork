@@ -8,28 +8,28 @@ namespace GForumBelarus.WebSite.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class PostController : ControllerBase
     {
-        public JsonFileProductService ProductService { get; }
-        public ProductsController(JsonFileProductService productService) //ProductService is now an object of class JsonFileProductService
+        public JsonFilePostService PostService { get; }
+        public PostController(JsonFilePostService postService) //ProductService is now an object of class JsonFileProductService
         {
-            this.ProductService = productService;
+            this.PostService = postService;
 
         }
      
-        public IEnumerable<Product> Get()  //call out getproducts from JsonFileProductService
+        public IEnumerable<Post> Get()  //call out getproducts from JsonFileProductService
         {  
-            return ProductService.GetProducts(); 
+            return PostService.GetPosts(); 
         }
 
         //[HttpPatch] "[FromBody]"
         [Route("Rate")] // Данные маршрута в RouteData.Values 
         [HttpGet] 
         public ActionResult Get(
-            [FromQuery] string ProductId, //Из строки запроса
+            [FromQuery] string PostId, //Из строки запроса
             [FromQuery] int Rating)
         {
-            ProductService.AddRating(ProductId, Rating);
+            PostService.AddRating(PostId, Rating);
             return Ok();
 
         }

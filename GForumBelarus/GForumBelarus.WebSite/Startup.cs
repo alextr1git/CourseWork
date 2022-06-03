@@ -39,7 +39,7 @@ namespace GForumBelarus.WebSite
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddControllers();
-            services.AddTransient<JsonFileProductService>(); // transient means you can call it whenever you want to
+            services.AddTransient<JsonFilePostService>(); // transient means you can call it whenever you want to
             
         }
 

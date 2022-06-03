@@ -1,24 +1,24 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
 @using GForumBelarus.WebSite.Models
 @using GForumBelarus.WebSite.Services
-@inject JsonFileProductService ProductService
+@inject JsonFilePostService PostService
 
 <div class="card-columns">
-	@foreach (var Product in ProductService.GetProducts())
+	@foreach (var Post in PostService.GetPosts())
 	{
 		 <div> 
 
 			<div class="card">
-				<div class="card-img" style="background-image: url('@Product.Image');"></div>
+				<div class="card-img" style="background-image: url('@Post.Image');"></div>
 				<div class="card-body">
-					<h5 class="card-title">@Product.Title</h5>
+					<h5 class="card-title">@Post.Title</h5>
 
 				</div>
 			</div>
 			<div class ="card-footer">
 				<small class="text-muted">
-					<button @onclick="(e => SelectProduct(Product.Id))"
-                    data-toggle="modal" data-target="#productModal" class="btn btn-primary">More info</button>
+					<button @onclick="(e => SelectPost(Post.Id))"
+                    data-toggle="modal" data-target="#postModal" class="btn btn-primary">More info</button>
 
 				</small>
 			</div>
@@ -28,24 +28,24 @@
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> //stars fonts
 
-@if (selectedProduct != null)
+@if (selectedPost != null)
 {
-<div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postTitle" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 
 		<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="productTitle">@selectedProduct.Title</h5>
+							<h5 class="modal-title" id="postTitle">@selectedPost.Title</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
 						<div class="modal-body">
 							<div class="card">
-								<div class="card-img" style="background-image: url('@selectedProduct.Image');">
+								<div class="card-img" style="background-image: url('@selectedPost.Image');">
 								</div>
 								<div class="card-body">
-									<p class="card-text">@selectedProduct.Description</p>
+									<p class="card-text">@selectedPost.Description</p>
 								</div>
 							</div>
 						</div>
@@ -83,13 +83,13 @@
 
 
 @code {
-	Product selectedProduct;
-	string selectProductId;
+	Post selectedPost;
+	string selectPostId;
 
-	void SelectProduct(string productId)
+	void SelectPost(string postId)
 	{
-		selectProductId = productId;
-		selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
+		selectPostId = postId;
+		selectedPost = PostService.GetPosts().First(x => x.Id == postId);
 		GetCurrentRating();
 	}
 
@@ -99,23 +99,23 @@
 
 	void GetCurrentRating()
 	{
-		if (selectedProduct.Ratings == null)
+		if (selectedPost.Ratings == null)
 		{
 			currentRating = 0;
 			voteCount = 0;
 		}
 		else
 		{
-			voteCount = selectedProduct.Ratings.Count();
+			voteCount = selectedPost.Ratings.Count();
 			voteLabel = voteCount > 1 ? "Votes" : "Vote";
-			currentRating = selectedProduct.Ratings.Sum() / voteCount;
+			currentRating = selectedPost.Ratings.Sum() / voteCount;
 		}
 	}
 
 	void SubmitRating(int rating)
 	{
-		ProductService.AddRating(selectProductId, rating);
-		SelectProduct(selectedProduct.Id);
+		PostService.AddRating(selectPostId, rating);
+		SelectPost(selectedPost.Id);
 	}
 
 }
