@@ -71,6 +71,16 @@ namespace GForumBelarus.WebSite.Services
                     existcomments.Add(comment);
                     posts.First(x => x.Id == postid).Comments = existcomments.ToArray();
                 }
-            }
+                    using var outputStream = File.OpenWrite(JsonFileName);
+
+                    JsonSerializer.Serialize<IEnumerable<Post>>(
+                        new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                        {
+                            SkipValidation = true, // to accept any language
+                            Indented = true
+                        }),
+                        posts //write down the item with changed rating
+            );
+        }
         }
     }

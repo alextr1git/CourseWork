@@ -82,7 +82,19 @@
 						}
 					}
 					</div>
+
+					<span>Comments section</span>
+
+					<div class="card">
+
+						<form method="post">
+						<input type="text" @bind-value="@commentaryonform" name="comment"> 
+						<input type="button" @onclick="(e => SubmitComment(commentaryonform))">
+						</form> 
+							
+					</div>
 					<div class="modal-footer">
+
 						@if (comCount == 0)
 						{
 							<span>Оставьте комментарий!</span>
@@ -90,26 +102,21 @@
 						else
 						{
 							
+							
 							<div class="container justify-content-center mt-5 border-left border-right">
 								@foreach(string comment in CommentsList)
 											{
 												
 												
 												<div class="d-flex justify-content-center py-2">
-													<div class="second py-2 px-2"> <span class="commentssection">Type your note, and hit enter to add it</span>
+													<div class="second py-2 px-2"> <span class="commentssection">@comment</span>
 														<div class="d-flex justify-content-between py-1 pt-2">
 															<div><span class="namecomment">/username</span></div>											
 														</div>
 													</div>
 												</div>
-												
-												
 											}	
-											</div>
-											
-											
-										
-						}
+											</div>																																					}
 					</div>
 
 				
@@ -141,6 +148,7 @@
 	string comLabel;
 	int comCount = 0;
 	string voteLabel;
+	string commentaryonform;
 	List<string> CommentsList = new List<string>();
 
 	void GetCurrentRating()
@@ -183,5 +191,12 @@
 
 			
 			}
+
+				void SubmitComment(string comm)
+			{
+				PostService.AddComment(selectPostId, comm);
+				SelectPost(selectedPost.Id);			
+			}
+
 
 }

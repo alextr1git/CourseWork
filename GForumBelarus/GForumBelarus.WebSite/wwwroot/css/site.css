@@ -21,7 +21,10 @@ for details on configuring this project to bundle and minify static web assets. 
 .Commentsaredown {
     text-align:center;
 }
+.putcommhere {
 
+    block-size: 75%;
+}
 .commentssection {
     font-size: 13px;
     font-weight: 500;

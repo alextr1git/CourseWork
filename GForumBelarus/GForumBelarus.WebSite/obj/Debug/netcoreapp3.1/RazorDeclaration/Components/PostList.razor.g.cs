@@ -41,7 +41,7 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 126 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
+#line 133 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
        
 	Post selectedPost;
 	string selectPostId;
@@ -60,6 +60,7 @@ using GForumBelarus.WebSite.Services;
 	string comLabel;
 	int comCount = 0;
 	string voteLabel;
+	string commentaryonform;
 	List<string> CommentsList = new List<string>();
 
 	void GetCurrentRating()
@@ -102,6 +103,13 @@ using GForumBelarus.WebSite.Services;
 
 			
 			}
+
+				void SubmitComment(string comm)
+			{
+				PostService.AddComment(selectPostId, comm);
+				SelectPost(selectedPost.Id);			
+			}
+
 
 
 #line default
