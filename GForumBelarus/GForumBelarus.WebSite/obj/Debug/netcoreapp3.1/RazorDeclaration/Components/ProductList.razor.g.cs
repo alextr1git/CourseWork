@@ -41,16 +41,43 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\ProductList.razor"
-      
-        Product selectProduct;
-        string selectProductId;
+#line 85 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\ProductList.razor"
+       
+	Product selectedProduct;
+	string selectProductId;
 
-        void SelectProduct(string productId)
-        {
-            selectProductId = productId;
-            selectProduct = ProductService.GetProducts().First(x => x.Id == productId);
-        }
+	void SelectProduct(string productId)
+	{
+		selectProductId = productId;
+		selectedProduct = ProductService.GetProducts().First(x => x.Id == productId);
+		GetCurrentRating();
+	}
+
+	int currentRating = 0;
+	int voteCount = 0;
+	string voteLabel;
+
+	void GetCurrentRating()
+	{
+		if (selectedProduct.Ratings == null)
+		{
+			currentRating = 0;
+			voteCount = 0;
+		}
+		else
+		{
+			voteCount = selectedProduct.Ratings.Count();
+			voteLabel = voteCount > 1 ? "Votes" : "Vote";
+			currentRating = selectedProduct.Ratings.Sum() / voteCount;
+		}
+	}
+
+	void SubmitRating(int rating)
+	{
+		System.Console.WriteLine($"Rating received for {selectedProduct.Id}: {rating}");
+		ProductService.AddRating(selectProductId, rating);
+		SelectProduct(selectedProduct.Id);
+	}
 
 
 #line default
