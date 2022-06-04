@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -19,7 +20,7 @@ namespace GForumBelarus.WebSite.Services
 
             private string JsonFileName => Path.Combine(WebHostEnvironment.WebRootPath, "data", "postbase.json"); // universal route to json file 
 
-            public IEnumerable<Post> GetPosts() //deserialize JSON to objects as array of Products. Type IEnumerable (JSON->PRODUCTS)
+            public IList<Post> GetPosts() //deserialize JSON to objects as array of Products. Type IEnumerable (JSON->PRODUCTS)
             {
                 using var jsonFileReader = File.OpenText(JsonFileName);
                 return JsonSerializer.Deserialize<Post[]>(jsonFileReader.ReadToEnd(),
@@ -74,7 +75,7 @@ namespace GForumBelarus.WebSite.Services
                 }
                     using var outputStream = File.OpenWrite(JsonFileName);
 
-                    JsonSerializer.Serialize<IEnumerable<Post>>(
+                    JsonSerializer.Serialize<IList<Post>>(
                         new Utf8JsonWriter(outputStream, new JsonWriterOptions
                         {
                             SkipValidation = true, // to accept any language
@@ -82,6 +83,47 @@ namespace GForumBelarus.WebSite.Services
                         }),
                         posts //write down the item with changed rating
             );
+            }
+
+
+        public void AddPost(
+            string creator,
+            string image,
+            string Title,
+            string Description)
+        {
+            Random rnd = new Random();
+            DateTime nowdate = DateTime.Now.Date;
+            Post NewPost = new Post();
+           
+
+            int randvalue = rnd.Next(0, 1000000);
+            var posts = GetPosts();
+
+            using var outputStream = File.OpenWrite(JsonFileName);
+
+            NewPost.Id = randvalue.ToString();
+            NewPost.Creator = creator;
+            NewPost.Image = image;
+            NewPost.PublDate = nowdate.Date.ToString("dd/MM/yyyy");
+            NewPost.Title = Title;
+            NewPost.Description = Description;
+            NewPost.Ratings = null;
+            NewPost.Comments = null;
+
+            IList<Post> newlist = new List<Post>(posts);
+
+             newlist.Add(NewPost);
+
+ 
+            JsonSerializer.Serialize<IList<Post>>(
+                      new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                      {
+                          SkipValidation = true, // to accept any language
+                          Indented = true
+                      }),
+                      newlist
+                      );//write down the item with changed rating
         }
-        }
+    }
     }

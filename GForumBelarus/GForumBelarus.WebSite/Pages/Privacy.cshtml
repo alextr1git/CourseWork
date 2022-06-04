@@ -1,8 +1,13 @@
 ﻿@page
+@using GForumBelarus.WebSite.Components;
 @model PrivacyModel
 @{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+<div class="text-center">
+    <h1 class="display-4">The Greatest Guide of Belarus</h1>
+    <p>Откройте для себя другую Беларусь</a>.</p>
+</div>
+@(await Html.RenderComponentAsync<Component>(RenderMode.ServerPrerendered))
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <script src="_framework/blazor.server.js"></script> 
