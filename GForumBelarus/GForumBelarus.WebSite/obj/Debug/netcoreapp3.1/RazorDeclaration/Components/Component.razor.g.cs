@@ -41,31 +41,30 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 67 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 62 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
        
     string title;
     string image;
     string descr;
     string creator;
+    string distr;
+    string tag;
+    string Email;
 
     void NewPost(
             string creator,
             string image,
             string Title,
-            string Description)
+            string Description,
+            string District,
+            string Tag,
+            string Email)
 
 			{
-				PostService.AddPost(creator, image,Title,Description);
+				PostService.AddPost(creator, image,Title,Description,District,Tag,Email);
 			    			
 			}
-            //{"Id":"2",
-            // "Creator":"sfdg",
-            // "img":null,
-            // "PublDate":"04.06.2022 0:00:00",
-            // "Title":"Title",
-            // "Description":"asf",
-            // "Ratings":null,
-            // "Comments":null}
+
 
 #line default
 #line hidden

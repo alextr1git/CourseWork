@@ -97,3 +97,7 @@ E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelaru
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\PostList.razor.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Component.razor.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\Component.razor.g.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Admin.razor.g.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\Admin.razor.g.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\Admin.cshtml.g.cs

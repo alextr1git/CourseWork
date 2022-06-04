@@ -17,29 +17,24 @@
                 <input @bind-value="@title" type="text" class="form-control" id="Title"  rows="3">
               </div>
 
-                <label class="form-label" for="cover">Выберите обложку</label>
-                <input type="file"  "@bind-value="@image" class="form-control id="customFile" />
+               <div class="form-group">
+                <label for="Title">Добавьте обложку (URL)</label>
+                <input @bind-value="@image" type="text" class="form-control" id="Title"  rows="3">
+              </div>
 
               <div class="form-group">
                 <label for="Description">Описание</label>
                 <input type="text" class="form-control" id="Title"@bind-value="@descr" rows="3">
-              </div>
-               
+              </div>             
+              
               <div class="form-group">
-                <label for="exampleFormControlSelect2">Выберите область</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
-                  <option>Брестская</option>
-                  <option>Витебская</option>
-                  <option>Гомельская</option>
-                  <option>Гродненская</option>
-                  <option>Могилевская</option>
-                  <option>Минская</option>
-                </select>
-              </div>            
+                <label for="Location"></label>
+                <input type="text" class="form-control" id="Title"@bind-value="@distr" rows="3">
+              </div>     
 
               <div class="form-group">
                 <label for="Tags">Теги</label><small> (Разделяйте их пробелами)</small>
-               <input type="text" class="form-control" id="exampleFormControlTextarea1" rows="3">
+               <input type="text" @bind-value="@tag" class="form-control" id="exampleFormControlTextarea1" rows="3">
               </div>
 
                     <div class="form-group">
@@ -49,10 +44,10 @@
 
                <div class="form-group">
                 <label for="email">Ваш email адрес</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="email" @bind-value="@Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
               </div>
 
-            <button type="button" class="btn btn-success"  @onclick="(e => NewPost(creator,image,title,descr))">ОпубликоDать</button>
+            <button type="button" class="btn btn-success"  @onclick="(e => NewPost(creator,image,title,descr,distr,tag,Email))">ОпубликоDать</button>
              @*<button type="button" class="btn btn-secondary">Очистить поля</button>*@
              
               
@@ -69,24 +64,22 @@
     string image;
     string descr;
     string creator;
+    string distr;
+    string tag;
+    string Email;
 
     void NewPost(
             string creator,
             string image,
             string Title,
-            string Description)
+            string Description,
+            string District,
+            string Tag,
+            string Email)
 
 			{
-				PostService.AddPost(creator, image,Title,Description);
+				PostService.AddPost(creator, image,Title,Description,District,Tag,Email);
 			    			
 			}
-            //{"Id":"2",
-            // "Creator":"sfdg",
-            // "img":null,
-            // "PublDate":"04.06.2022 0:00:00",
-            // "Title":"Title",
-            // "Description":"asf",
-            // "Ratings":null,
-            // "Comments":null}
-}
 
+}

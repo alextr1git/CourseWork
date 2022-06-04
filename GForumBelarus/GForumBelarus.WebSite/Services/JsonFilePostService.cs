@@ -90,7 +90,10 @@ namespace GForumBelarus.WebSite.Services
             string creator,
             string image,
             string Title,
-            string Description)
+            string Description,
+            string District,
+            string Tag,
+            string Email)
         {
             Random rnd = new Random();
             DateTime nowdate = DateTime.Now.Date;
@@ -110,6 +113,9 @@ namespace GForumBelarus.WebSite.Services
             NewPost.Description = Description;
             NewPost.Ratings = null;
             NewPost.Comments = null;
+            NewPost.District = District;
+            NewPost.Tag = Tag;
+            NewPost.OwnerEmail = Email;
 
             IList<Post> newlist = new List<Post>(posts);
 
