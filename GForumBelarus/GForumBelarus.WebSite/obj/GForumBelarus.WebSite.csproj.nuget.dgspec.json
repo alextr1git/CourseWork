@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj": {}
+    "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\CourseWork\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj": {}
   },
   "projects": {
-    "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj": {
+    "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\CourseWork\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj",
+        "projectUniqueName": "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\CourseWork\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj",
         "projectName": "GForumBelarus.WebSite",
-        "projectPath": "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj",
+        "projectPath": "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\CourseWork\\GForumBelarus\\GForumBelarus.WebSite\\GForumBelarus.WebSite.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\GForumBelarus\\GForumBelarus.WebSite\\obj\\",
+        "outputPath": "E:\\IT&BSUIR\\БГУИР\\2 КУРС\\4 сем\\COURSEWORK\\CourseWork\\GForumBelarus\\GForumBelarus.WebSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

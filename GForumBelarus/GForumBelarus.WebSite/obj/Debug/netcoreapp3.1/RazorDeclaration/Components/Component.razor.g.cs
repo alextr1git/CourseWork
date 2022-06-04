@@ -13,21 +13,21 @@ namespace GForumBelarus.WebSite.Components
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 2 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 2 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 3 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
 using GForumBelarus.WebSite.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 4 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
 using GForumBelarus.WebSite.Services;
 
 #line default
@@ -41,7 +41,7 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 62 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 61 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
        
     string title;
     string image;
@@ -50,6 +50,30 @@ using GForumBelarus.WebSite.Services;
     string distr;
     string tag;
     string Email;
+
+    //void ValidateData(
+    //        string creator,
+    //        string image,
+    //        string Title,
+    //        string Description,
+    //        string District,
+    //        string Tag,
+    //        string Email)
+    //{
+    //    bool ValidateText(string creator, string Title, string Description){
+    //        string combined = creator + Title + Description;
+    //        foreach(char letter in combined){
+    //            if (letter.IsDigit)
+    //                return false;
+    //                break;
+
+    //        }
+    //             return true;
+    //    }
+
+        
+
+    //}
 
     void NewPost(
             string creator,

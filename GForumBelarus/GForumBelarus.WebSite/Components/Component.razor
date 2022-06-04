@@ -14,43 +14,40 @@
                 
               <div class="form-group">
                 <label for="Title">Заголовок</label>
-                <input @bind-value="@title" type="text" class="form-control" id="Title"  rows="3">
+                <input @bind-value="@title" type="text" maxlength="30" class="form-control" id="Title"  rows="3">
               </div>
 
                <div class="form-group">
                 <label for="Title">Добавьте обложку (URL)</label>
-                <input @bind-value="@image" type="text" class="form-control" id="Title"  rows="3">
+                <input @bind-value="@image" type="text" maxlength="100" class="form-control" id="Title"  rows="3">
               </div>
 
               <div class="form-group">
                 <label for="Description">Описание</label>
-                <input type="text" class="form-control" id="Title"@bind-value="@descr" rows="3">
+                <input type="text" maxlength="500" class="form-control" id="Title"@bind-value="@descr" rows="3">
               </div>             
               
               <div class="form-group">
-                <label for="Location"></label>
-                <input type="text" class="form-control" id="Title"@bind-value="@distr" rows="3">
+                <label for="Location">Месторасположение</label>
+                <input type="text" maxlength="25" class="form-control" id="Title"@bind-value="@distr" rows="3">
               </div>     
 
               <div class="form-group">
-                <label for="Tags">Теги</label><small> (Разделяйте их пробелами)</small>
-               <input type="text" @bind-value="@tag" class="form-control" id="exampleFormControlTextarea1" rows="3">
+                <label for="Tags">Категория</label>
+               <input type="text" maxlength="15" @bind-value="@tag" class="form-control" id="exampleFormControlTextarea1" rows="3">
               </div>
 
                     <div class="form-group">
                 <label for="UserName">Автор</label>
-               <input type="text" @bind-value="@creator" class="form-control" id="Title"  rows="3">
+               <input type="text" maxlength="20" @bind-value="@creator" class="form-control" id="Title"  rows="3">
               </div>
 
                <div class="form-group">
                 <label for="email">Ваш email адрес</label>
-                <input type="email" @bind-value="@Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="email" maxlength="40" @bind-value="@Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
               </div>
 
-            <button type="button" class="btn btn-success"  @onclick="(e => NewPost(creator,image,title,descr,distr,tag,Email))">ОпубликоDать</button>
-             @*<button type="button" class="btn btn-secondary">Очистить поля</button>*@
-             
-              
+            <button type="button" class="btn btn-success"  @onclick="(e => NewPost(creator,image,title,descr,distr,tag,Email))">Опубликовать</button>                        
         </form>
        
 		</div>
@@ -58,6 +55,8 @@
 	</div>
 
 </div>
+
+
 
 @code {
     string title;
@@ -67,6 +66,30 @@
     string distr;
     string tag;
     string Email;
+
+    //void ValidateData(
+    //        string creator,
+    //        string image,
+    //        string Title,
+    //        string Description,
+    //        string District,
+    //        string Tag,
+    //        string Email)
+    //{
+    //    bool ValidateText(string creator, string Title, string Description){
+    //        string combined = creator + Title + Description;
+    //        foreach(char letter in combined){
+    //            if (letter.IsDigit)
+    //                return false;
+    //                break;
+
+    //        }
+    //             return true;
+    //    }
+
+        
+
+    //}
 
     void NewPost(
             string creator,
