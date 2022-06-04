@@ -88,8 +88,10 @@
 					<div class="card">
 
 						<form method="post">
+						<input type="text" @bind-value="@username" name="username">
 						<input type="text" @bind-value="@commentaryonform" name="comment"> 
-						<input type="button" @onclick="(e => SubmitComment(commentaryonform))">
+					
+						<input type="button" @onclick="(e => SubmitComment(commentaryonform,username))">
 						</form> 
 							
 					</div>
@@ -104,18 +106,17 @@
 							
 							
 							<div class="container justify-content-center mt-5 border-left border-right">
-								@foreach(string comment in CommentsList)
-											{
+								@for (int i = 0; i<comCount; i++){
 												
 												
 												<div class="d-flex justify-content-center py-2">
-													<div class="second py-2 px-2"> <span class="commentssection">@comment</span>
+													<div class="second py-2 px-2"> <span class="commentssection">@CommentsList[i]</span>
 														<div class="d-flex justify-content-between py-1 pt-2">
-															<div><span class="namecomment">/username</span></div>											
+															<div><span class="namecomment">@CommentsUser[i]</span></div>											
 														</div>
 													</div>
 												</div>
-											}	
+								}	
 											</div>																																					}
 					</div>
 
@@ -149,7 +150,9 @@
 	int comCount = 0;
 	string voteLabel;
 	string commentaryonform;
+	string username;
 	List<string> CommentsList = new List<string>();
+	List<string> CommentsUser = new List<string>();
 
 	void GetCurrentRating()
 	{
@@ -178,9 +181,12 @@
 			comCount = selectedPost.Comments.Count();
 			comLabel = comCount > 1 ? "Комментариев" : "Комментарий";
 			CommentsList.Clear();
+			CommentsUser.Clear();
 			foreach (string comment in selectedPost.Comments)
-					{
-						CommentsList.Add(comment);
+			{
+				string[] divided = comment.Split(':');
+				CommentsList.Add(divided[1]);
+					CommentsUser.Add(divided[0]);
 					}
 				}
 			}
@@ -192,9 +198,9 @@
 			
 			}
 
-				void SubmitComment(string comm)
+				void SubmitComment(string comm, string user)
 			{
-				PostService.AddComment(selectPostId, comm);
+				PostService.AddComment(selectPostId, comm, user);
 				SelectPost(selectedPost.Id);			
 			}
 

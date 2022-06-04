@@ -36,6 +36,7 @@ for details on configuring this project to bundle and minify static web assets. 
     font-weight: 500;
     margin-left: 6px;
     color: #56575b;
+    font-weight: bold;
 }
 
 .card-columns .card-img {

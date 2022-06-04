@@ -56,7 +56,7 @@ namespace GForumBelarus.WebSite.Services
                 );
             }
 
-            public void AddComment(string postid, string comment)
+            public void AddComment(string postid, string comment, string author)
             {
 
                 var posts = GetPosts();
@@ -68,7 +68,8 @@ namespace GForumBelarus.WebSite.Services
                 else
                 {
                     var existcomments = posts.First(x => x.Id == postid).Comments.ToList(); //list of comments
-                    existcomments.Add(comment);
+                string signedcomm = author + ":" + comment;
+                    existcomments.Add(signedcomm);
                     posts.First(x => x.Id == postid).Comments = existcomments.ToArray();
                 }
                     using var outputStream = File.OpenWrite(JsonFileName);

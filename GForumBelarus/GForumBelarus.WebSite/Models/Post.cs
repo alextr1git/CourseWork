@@ -8,6 +8,8 @@ namespace GForumBelarus.WebSite.Models
     {
         
         public string Id { get; set; }
+
+       // public string OwnerId { get; set; }
         public string Creator { get; set; }
 
         [JsonPropertyName("img")] //json tag

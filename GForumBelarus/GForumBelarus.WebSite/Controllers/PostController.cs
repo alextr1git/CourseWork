@@ -26,16 +26,16 @@ namespace GForumBelarus.WebSite.Controllers
         [Route("Rate")] // Данные маршрута в RouteData.Values 
         [HttpGet] 
         public ActionResult Get(
-            [FromQuery] string PostId, //Из строки запроса
+           [FromQuery] string PostId, //Из строки запроса
             [FromQuery] int Rating,
             [FromQuery] string Comment)
         {
             PostService.AddRating(PostId, Rating);
-            PostService.AddComment(PostId, Comment);
+           // PostService.AddComment(PostId, Comment);
             return Ok();
 
         }
-
+       
 
     }
 
