@@ -29,8 +29,7 @@ namespace GForumBelarus.WebSite.Controllers
         [HttpGet] 
         public ActionResult Get(
            [FromQuery] string PostId, //Из строки запроса
-            [FromQuery] int Rating,
-            [FromQuery] string Comment)
+            [FromQuery] int Rating)
         {
             PostService.AddRating(PostId, Rating);
            // PostService.AddComment(PostId, Comment);

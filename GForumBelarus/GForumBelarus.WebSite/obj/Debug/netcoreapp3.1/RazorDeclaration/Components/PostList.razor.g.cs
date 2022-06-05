@@ -55,7 +55,6 @@ using GForumBelarus.WebSite.Services;
 	}
 
 	int currentRating = 0;
-	int CurrentCom = 0;
 	int voteCount = 0;
 	string comLabel;
 	int comCount = 0;
@@ -84,7 +83,6 @@ using GForumBelarus.WebSite.Services;
 	{
 		if (selectedPost.Comments == null)
 		{
-			CurrentCom = 0;
 			comCount = 0;
 		}
 		else

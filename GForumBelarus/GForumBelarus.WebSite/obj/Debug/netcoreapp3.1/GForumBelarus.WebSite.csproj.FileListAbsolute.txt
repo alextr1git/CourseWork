@@ -273,20 +273,15 @@ E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\G
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.MvcApplicationPartsAssemblyInfo.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.MvcApplicationPartsAssemblyInfo.cache
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.RazorComponent.input.cache
-E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Admin.razor.g.cs
-E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Component.razor.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\PostList.razor.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.RazorComponent.output.cache
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\GForumBelarus.WebSite.dll
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.TagHelpers.input.cache
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.TagHelpers.output.cache
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.RazorCoreGenerate.cache
-E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\Admin.razor.g.cs
-E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\Component.razor.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\PostList.razor.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\AboutUs.cshtml.g.cs
-E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\Admin.cshtml.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
@@ -306,3 +301,5 @@ E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\G
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.dll
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.pdb
 E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\GForumBelarus.WebSite.genruntimeconfig.cache
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\NewPostPage.razor.g.cs
+E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\obj\Debug\netcoreapp3.1\Razor\Components\NewPostPage.razor.g.cs

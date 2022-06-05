@@ -13,27 +13,27 @@ namespace GForumBelarus.WebSite.Components
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 2 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 2 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\NewPost.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 3 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\NewPost.razor"
 using GForumBelarus.WebSite.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 4 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\NewPost.razor"
 using GForumBelarus.WebSite.Services;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class Component : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class NewPost : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -41,7 +41,7 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 61 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 61 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\NewPost.razor"
        
     string title;
     string image;
@@ -70,7 +70,7 @@ using GForumBelarus.WebSite.Services;
 #line hidden
 #nullable disable
 #nullable restore
-#line 84 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+#line 84 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\NewPost.razor"
 
     private void HandleClick()
     {
