@@ -77,11 +77,11 @@ label small {
 
 .card-columns .card-img {
     height: 330px;
-    vertical-align: bottom;
+
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    opacity: .8;
+    opacity: .9;
 }
 
 .modal .card-img {
@@ -179,7 +179,7 @@ p {
 }
 
 h1 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Prata', serif;
 }
 
 ul {

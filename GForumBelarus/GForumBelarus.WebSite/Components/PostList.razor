@@ -12,17 +12,15 @@
 				<div class="card-img" style="background-image: url('@Post.Image');"></div>
 				<div class="card-body">
 					<h5 class="card-title">@Post.Title</h5>
-
-				</div>
-			</div>
-			<div class ="card-footer">
-				<small class="text-muted">
+					<small class="text-muted">
 					<button @onclick="(e => SelectPost(Post.Id))"
                     data-toggle="modal" data-target="#postModal" class="btn btn-primary">Узнать больше</button>
 
 				</small>
+				</div>
 			</div>
-		 </div>
+		 </div>		 
+		<br>
 
 	}
 </div>
@@ -53,7 +51,52 @@
 									<p class="card-text">Область: @selectedPost.District</p>
 									<p class="card-text">Тег: @selectedPost.Tag</p>
 									<p class="card-text">Автор: @selectedPost.Creator (@selectedPost.OwnerEmail)</p>
-									<p class="card-text">Дата публикации: @selectedPost.PublDate</p>									
+									<p class="card-text">Дата публикации: @selectedPost.PublDate</p>		
+									
+							
+						
+
+						<div class="form-group">
+						<label for="Username">Ваше имя</label>
+						<input @bind-value="@username" type="text" maxlength="30" class="form-control" id="Title"  rows="3">
+						 </div>
+
+					   <div class="form-group">
+						<label for="comment">Ваш комментарий</label>
+						<input  @bind-value="@commentaryonform" type="text" maxlength="100" class="form-control" id="Title"  rows="3">
+						 </div>
+
+						 <button type="button" class="btn btn-success"  @onclick="(e => SubmitComment(commentaryonform,username))">Отправить</button>                        
+						 <br>
+						 <br>
+					
+
+					<div class="modal-footer">
+
+						@if (comCount == 0)
+						{
+							<span>Оставьте комментарий первым!</span>
+						}
+						else
+						{
+							
+							
+							<div class="container justify-content-center mt-5 border-left border-right">
+								@for (int i = 0; i<comCount; i++){
+												
+												
+												<div class="d-flex justify-content-center py-2">
+													<div class="second py-2 px-2"> <span class="commentssection">@CommentsList[i]</span>
+														<div class="d-flex justify-content-between py-1 pt-2">
+															<div><span class="namecomment">@CommentsUser[i]</span></div>											
+														</div>
+													</div>
+												</div>
+								}	
+											</div>																																					}
+					</div>
+					
+						
 
 								</div>
 							</div>
@@ -84,42 +127,6 @@
 					}
 					</div>
 
-					<span>Comments section</span>
-
-					<div class="card">
-
-						<form method="post">
-						<input type="text" @bind-value="@username" name="username">
-						<input type="text" @bind-value="@commentaryonform" name="comment"> 
-					
-						<input type="button" @onclick="(e => SubmitComment(commentaryonform,username))">
-						</form> 
-							
-					</div>
-					<div class="modal-footer">
-
-						@if (comCount == 0)
-						{
-							<span>Оставьте комментарий!</span>
-						}
-						else
-						{
-							
-							
-							<div class="container justify-content-center mt-5 border-left border-right">
-								@for (int i = 0; i<comCount; i++){
-												
-												
-												<div class="d-flex justify-content-center py-2">
-													<div class="second py-2 px-2"> <span class="commentssection">@CommentsList[i]</span>
-														<div class="d-flex justify-content-between py-1 pt-2">
-															<div><span class="namecomment">@CommentsUser[i]</span></div>											
-														</div>
-													</div>
-												</div>
-								}	
-											</div>																																					}
-					</div>
 
 				
 
@@ -203,6 +210,7 @@
 			{
 				PostService.AddComment(selectPostId, comm, user);
 				SelectPost(selectedPost.Id);			
+
 			}
 
 

@@ -61,15 +61,15 @@ namespace GForumBelarus.WebSite.Services
             {
 
                 var posts = GetPosts();
-
-                if (posts.First(x => x.Id == postid).Comments == null) // search of first item with such ID
+                string signedcomm = author + ":" + comment;
+            if (posts.First(x => x.Id == postid).Comments == null) // search of first item with such ID
                 {
-                    posts.First(x => x.Id == postid).Comments = new string[] { comment };
+                    posts.First(x => x.Id == postid).Comments = new string[] { signedcomm };
                 }
                 else
                 {
                     var existcomments = posts.First(x => x.Id == postid).Comments.ToList(); //list of comments
-                string signedcomm = author + ":" + comment;
+                
                     existcomments.Add(signedcomm);
                     posts.First(x => x.Id == postid).Comments = existcomments.ToArray();
                 }

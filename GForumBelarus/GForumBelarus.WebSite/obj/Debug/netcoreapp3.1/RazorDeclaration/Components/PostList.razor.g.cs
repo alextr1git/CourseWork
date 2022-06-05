@@ -41,7 +41,7 @@ using GForumBelarus.WebSite.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 135 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
+#line 142 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\PostList.razor"
        
 	Post selectedPost;
 	string selectPostId;
@@ -113,6 +113,7 @@ using GForumBelarus.WebSite.Services;
 			{
 				PostService.AddComment(selectPostId, comm, user);
 				SelectPost(selectedPost.Id);			
+
 			}
 
 

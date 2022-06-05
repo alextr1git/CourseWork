@@ -67,30 +67,6 @@
     string tag;
     string Email;
 
-    //void ValidateData(
-    //        string creator,
-    //        string image,
-    //        string Title,
-    //        string Description,
-    //        string District,
-    //        string Tag,
-    //        string Email)
-    //{
-    //    bool ValidateText(string creator, string Title, string Description){
-    //        string combined = creator + Title + Description;
-    //        foreach(char letter in combined){
-    //            if (letter.IsDigit)
-    //                return false;
-    //                break;
-
-    //        }
-    //             return true;
-    //    }
-
-        
-
-    //}
-
     void NewPost(
             string creator,
             string image,
@@ -100,9 +76,15 @@
             string Tag,
             string Email)
 
-			{
-				PostService.AddPost(creator, image,Title,Description,District,Tag,Email);
-			    			
-			}
+    {
+        PostService.AddPost(creator, image,Title,Description,District,Tag,Email);
+        HandleClick();
+    }
+                @inject NavigationManager NavigationManager;
+
+    private void HandleClick()
+    {
+       NavigationManager.NavigateTo("/..", true);
+    }
 
 }

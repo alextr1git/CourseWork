@@ -51,30 +51,6 @@ using GForumBelarus.WebSite.Services;
     string tag;
     string Email;
 
-    //void ValidateData(
-    //        string creator,
-    //        string image,
-    //        string Title,
-    //        string Description,
-    //        string District,
-    //        string Tag,
-    //        string Email)
-    //{
-    //    bool ValidateText(string creator, string Title, string Description){
-    //        string combined = creator + Title + Description;
-    //        foreach(char letter in combined){
-    //            if (letter.IsDigit)
-    //                return false;
-    //                break;
-
-    //        }
-    //             return true;
-    //    }
-
-        
-
-    //}
-
     void NewPost(
             string creator,
             string image,
@@ -84,15 +60,28 @@ using GForumBelarus.WebSite.Services;
             string Tag,
             string Email)
 
-			{
-				PostService.AddPost(creator, image,Title,Description,District,Tag,Email);
-			    			
-			}
+    {
+        PostService.AddPost(creator, image,Title,Description,District,Tag,Email);
+        HandleClick();
+    }
+                
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 84 "E:\IT&BSUIR\БГУИР\2 КУРС\4 сем\COURSEWORK\CourseWork\GForumBelarus\GForumBelarus.WebSite\Components\Component.razor"
+
+    private void HandleClick()
+    {
+       NavigationManager.NavigateTo("/..", true);
+    }
 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private JsonFilePostService PostService { get; set; }
     }
 }
